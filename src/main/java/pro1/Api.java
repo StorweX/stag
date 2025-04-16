@@ -19,7 +19,10 @@ public class Api {
     {
         return getFromUri(baseUrl+"/rozvrhy/getRozvrhByKatedra?semestr=%25&outputFormat=JSON&katedra="+department+"&rok="+year);
     }
-
+    public static String getSpecializations(int year)
+    {
+        return getFromUri(baseUrl+"/prijimacky/getPrijimaciObory?outputFormat=JSON&rok="+year+"&jenAktualni=false");
+    }
     private static String getFromUri(String uri)
     {
         try {
